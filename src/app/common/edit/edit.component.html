@@ -1,0 +1,32 @@
+<md-card>
+  <md-input-container>
+    <input mdInput
+           placeholder="未命名文件"
+           value={{editPost.title}}
+           (blur)="saveTitle()"
+           [(ngModel)]="editPost.title">
+  </md-input-container>
+  <div fxLayout="row" fxLayoutAlign="space-between center"
+       fxLayoutGap="10px">
+    <app-tag-list [tags]="tags"
+                  (tagsModified)="modifyDraft($event)"></app-tag-list>
+    <div fxLayout="row" fxLayoutGap="10px">
+      <button md-raised-button class="mat-warn"
+              (click)="deleteDraft()">
+        删除草稿
+      </button>
+      <button md-raised-button class="mat-primary"
+              (click)="publishDraft()">
+        发布文章
+      </button>
+    </div>
+  </div>
+  <app-markdown (change)="contentChangeHandle($event)"
+                [postContent]="editPost.content">
+
+  </app-markdown>
+</md-card>
+
+
+
+

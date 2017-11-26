@@ -1,0 +1,35 @@
+@import '~@angular/material/_theming';
+
+@mixin _theme-skin-primary($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .skin-primary {
+    background: mat-color($primary);
+  }
+}
+
+@mixin _theme-skin-accent($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .skin-accent {
+    background: mat-color($accent,A200);
+  }
+}
+
+@mixin theme-skin($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  @include _theme-skin-primary($theme);
+  @include _theme-skin-accent($theme);
+}

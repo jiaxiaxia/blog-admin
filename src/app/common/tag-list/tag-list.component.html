@@ -1,0 +1,15 @@
+<div fxLayout="row" fxLayoutAlign="space-between center"
+     fxLayoutGap="10px">
+  <md-chip-list>
+    <md-chip *ngFor="let tag of tags" selected="{{tag.focus}}">
+      {{tag.value}}
+    </md-chip>
+  </md-chip-list>
+  <md-input-container fxFlex="2 1 180px">
+    <input mdInput
+           placeholder="click to add tags..."
+           #tagInput
+           [(ngModel)]="inputTag"
+           (keyup)="onTagInputKeyup($event)">
+  </md-input-container>
+</div>

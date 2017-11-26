@@ -1,0 +1,12 @@
+:host {
+  min-height: 100%;
+
+}
+
+.mat-card {
+  height: 100%;
+  overflow: scroll;
+  .mat-input-container {
+    width: 100%;
+  }
+}

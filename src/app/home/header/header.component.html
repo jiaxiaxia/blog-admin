@@ -1,0 +1,17 @@
+<div class="main-toolbar mat-elevation-z2" [ngClass]="[theme.header]" fxLayout="row" fxLayoutAlign="start center">
+    <button md-icon-button class="mat-accent" (click)="sidenav.opened = !sidenav.opened">
+        <md-icon >menu</md-icon>
+    </button>
+
+    <span fxFlex></span>
+
+    <button md-icon-button class="mat-accent"  fxHide="true" fxHide.gt-sm="false" (click)="toggleFullscreen()">
+        <md-icon  *ngIf="!isFullscreen">fullscreen</md-icon>
+        <md-icon  *ngIf="isFullscreen">fullscreen_exit</md-icon>
+    </button>
+
+    <button md-icon-button class="mat-accent" >
+        <md-icon >search</md-icon>
+    </button>
+
+</div>

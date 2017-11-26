@@ -1,0 +1,24 @@
+@import '~@angular/material/_theming';
+
+
+
+@mixin _theme-header-primary($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .skin-primary {
+  }
+}
+
+
+@mixin theme-header($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  @include _theme-header-primary($theme);
+}

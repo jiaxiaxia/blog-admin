@@ -1,0 +1,32 @@
+@import '~@angular/material/_theming';
+
+@mixin _theme-sidenav-primary($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .skin-primary {
+    .sidenav-anchor {
+      color: #a1a1a1;
+
+      &:hover {
+        color: #a1a1a1;
+      }
+
+      &.active {
+        color: #fafafa;
+      }
+    }
+  }
+}
+
+@mixin theme-sidenav($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  @include _theme-sidenav-primary($theme);
+}

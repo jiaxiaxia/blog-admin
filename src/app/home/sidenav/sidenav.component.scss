@@ -1,0 +1,29 @@
+@import "~styles/conf/conf";
+md-toolbar.mat-toolbar.sidenav-toolbar {
+  z-index: 3;
+}
+
+.sidenav-container {
+  height: 100%;
+
+  .sidenav-scrollbar-container {
+    height: calc(100% - #{$header-height} - #{$footer-height});
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none
+    }
+  }
+
+  .sidenav-footer {
+    a {
+      background-color: transparent;
+      color: rgba(255, 255, 255, .8)
+    }
+  }
+}
+
+
+
+
+
+

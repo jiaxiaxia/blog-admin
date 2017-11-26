@@ -1,0 +1,9 @@
+<div fxlayout="column" fxLayoutAlign="start stretch">
+    <section fxlayout="row" fxFlex="1 2 200px">
+        <app-post-list (clickPost)="handlerPost($event)" [updateList]="updateList"></app-post-list>
+    </section>
+
+
+    <app-edit fxFlex [postId]="postId" (titleUpdated)="titleUpdated()" ></app-edit>
+</div>
+

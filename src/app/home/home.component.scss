@@ -1,0 +1,33 @@
+@import "~styles/conf/conf";
+$content-margin:10px;
+md-sidenav-container {
+  height: 100vh;
+
+  .sidenav {
+    width: $sidebar-width;
+    max-width: $sidebar-width;
+    overflow-x: hidden;
+    z-index: 4;
+  }
+  .sidenav-container {
+    height: 100%;
+
+    .main-container {
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: calc(100% - #{$header-height});
+      position: relative;
+      .content {
+
+        padding: $content-margin;
+        height: calc(100% - #{$footer-height} );
+        overflow-y: hidden;
+      }
+    }
+  }
+}
+
+
+
+
+

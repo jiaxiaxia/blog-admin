@@ -1,0 +1,20 @@
+<md-sidenav-container>
+    <md-sidenav class="sidenav" mode="side" opened="true"
+                #sidenav>
+        <app-sidenav [theme]="theme"></app-sidenav>
+    </md-sidenav>
+
+    <div class="sidenav-container" fxLayout="column">
+        <app-header [sidenav]="sidenav" [theme]="theme"></app-header>
+        <div class="main-container" #scrollContainer>
+            <div class="content"  [ngClass]="[theme.content]">
+                <router-outlet>
+
+                    <!--(activate)="onActivate($event, scrollContainer)"-->
+                </router-outlet>
+            </div>
+            <!--<app-footer [theme]="theme"></app-footer>-->
+        </div>
+
+    </div>
+</md-sidenav-container>

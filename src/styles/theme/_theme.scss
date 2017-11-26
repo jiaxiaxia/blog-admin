@@ -1,0 +1,20 @@
+@import '~@angular/material/_theming';
+@import "./skin.theme";
+@import "./sidenav.theme";
+@import "./content.theme";
+@import "./header.theme";
+@import "./footer.theme";
+@import "./palette";
+//@import '~@angular/material/prebuilt-themes/purple-green.css';
+@include mat-core();
+$candy-app-primary: mat-palette($mat-dark-light);
+$candy-app-accent: mat-palette($mat-grey,A200,A100,A400);
+$candy-app-warn: mat-palette($mat-red);
+$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+@include angular-material-theme($candy-app-theme);
+
+@include theme-skin($candy-app-theme);
+@include theme-sidenav($candy-app-theme);
+@include theme-content($candy-app-theme);
+@include theme-header($candy-app-theme);
+@include theme-footer($candy-app-theme)

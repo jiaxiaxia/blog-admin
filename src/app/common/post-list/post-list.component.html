@@ -1,0 +1,12 @@
+<md-toolbar>
+    <md-icon>library_books</md-icon> <h3>文章列表</h3>
+    <span fxFlex></span>
+    <button md-icon-button (click)="addDraft()"><md-icon>add</md-icon></button>
+</md-toolbar>
+<md-nav-list>
+    <a md-list-item *ngFor="let post of postList;index as i" [class.selected]="selectedIndex===i"  (click)="click(post.id,i)">
+        <h3 mdLine>{{post.title}}</h3>
+        <h6 mdLine>{{post.lastEditTime}}</h6>
+        <p mdLine>{{post.excerpt}}</p>
+    </a>
+</md-nav-list>

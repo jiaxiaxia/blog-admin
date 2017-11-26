@@ -1,0 +1,26 @@
+@import '~@angular/material/_theming';
+
+@mixin _theme-logo-primary($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  .skin-primary{
+    .logo-text {
+      color: #fff;
+    }
+
+  }
+
+}
+
+@mixin theme-logo($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  @include _theme-logo-primary($theme);
+}
+

@@ -1,0 +1,29 @@
+@import "~styles/conf/conf";
+
+
+
+:host {
+  width: 200px;
+  height: 100%;
+
+}
+
+md-nav-list {
+  height: calc(100% - #{$header-height});
+  overflow: scroll;
+
+  a {
+    &.mat-list-item.selected{
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+    * {
+      line-height: 2;
+    }
+    h3 {
+
+      font-weight: 500 !important;
+    }
+
+  }
+}
+

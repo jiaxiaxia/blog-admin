@@ -1,0 +1,10 @@
+@import "~styles/conf/conf";
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: $footer-height;
+  line-height: $footer-height;
+  width: 100%;
+  text-align: center;
+}
